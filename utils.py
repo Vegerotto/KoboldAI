@@ -286,7 +286,7 @@ def _transformers22_aria2_hook(pretrained_model_name_or_path: str, force_downloa
             if token is None:
                 raise EnvironmentError("You specified use_auth_token=True, but a huggingface token was not found.")
     _cache_dir = str(cache_dir) if cache_dir is not None else transformers.TRANSFORMERS_CACHE
-     _revision = getattr(koboldai_vars, "revision", huggingface_hub.constants.DEFAULT_REVISION)
+    _revision = getattr(koboldai_vars, "revision", huggingface_hub.constants.DEFAULT_REVISION)
     sharded = False
     headers = {"user-agent": transformers.file_utils.http_user_agent(user_agent)}
     if use_auth_token:
